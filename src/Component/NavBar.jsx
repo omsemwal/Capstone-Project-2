@@ -1,7 +1,7 @@
 import React from 'react';
-import { Menu,Button,Typography,Avatar } from 'antd';
+import { Menu,Typography,Avatar } from 'antd';
 import {Link} from 'react-router-dom';
-import { HomeOutlined,MoneyCollectOutlined,BulbOutlined,FundOutlined,MenuOutlined } from '@ant-design/icons';
+import { HomeOutlined,BulbOutlined,FundOutlined,SwapOutlined } from '@ant-design/icons';
 import MenuItem from 'antd/es/menu/MenuItem';
 const NavBar = () => {
   return (
@@ -18,6 +18,9 @@ const NavBar = () => {
               <Link to="/">Home</Link></MenuItem>
               <MenuItem icon={<FundOutlined/>}>
               <Link to="/crypto">Cryptocurrencies</Link>
+              </MenuItem>
+              <MenuItem icon={<SwapOutlined/>}>
+                <Link to="/compare">Compare</Link>
               </MenuItem>
               <MenuItem icon={<BulbOutlined/>}>
                 <Link to="/news">News</Link>

@@ -7,11 +7,23 @@ import Crypto from '../Component/Crypto';
 import News from './News';
 const Home=()=>{
   const {data,isFetching}=useGetCryptosQuery(10);
-  if(isFetching){return "Loading";}
+  if(isFetching){
+    return (
+      <div style={{ padding: '20px' }}>
+        <Row gutter={[12,12]} style={{ marginLeft: "10px" }}>
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <Col span={12} key={i}>
+              <div className="skeleton-card" style={{ height: '90px' }} />
+            </Col>
+          ))}
+        </Row>
+      </div>
+    );
+  }
   const globalStats=data?.data?.stats;
   console.log("ff",data);
   return <>
-    <Typography.Title levle={2} className='heading' style={{marginLeft:"10px",textAlign:"center"}}>Global CryptopStats</Typography.Title>
+    <Typography.Title level={2} className='heading' style={{marginLeft:"10px",textAlign:"center"}}>Global Crypto Stats</Typography.Title>
     <Row gutter={[12,12]} style={{marginLeft:"10px"}}>
       <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
       <Col span={12}><Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)} /></Col>
@@ -20,7 +32,7 @@ const Home=()=>{
       <Col span={12}><Statistic title="Total Markets" value={millify(globalStats.totalMarkets) } /></Col>
     </Row>
      <Crypto simp="val"/>
-     <Typography.Title levle={3} className='show-more'>
+     <Typography.Title level={3} className='show-more'>
       <Link to="/crypto"> show more</Link>
     </Typography.Title>
     <News simp="a"/>

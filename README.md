@@ -1,72 +1,106 @@
-CryptoVerse is all about cryptocurrency
-Link:https://648092a8b7cfbf0904877858--heroic-tartufo-10ae66.netlify.app/
-# Getting Started with Create React App
+# 🪙 CryptoVerse — Cryptocurrency Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, dark-themed cryptocurrency dashboard built with React. Track live crypto prices, read trending news, compare coins, and explore detailed statistics — all in one place.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 📊 **Live Crypto Stats** — Total market cap, volume, exchanges, and more
+- 💰 **Top Coins** — Browse and search hundreds of cryptocurrencies with real-time prices
+- 📈 **Price Charts** — Interactive historical price charts with multiple time periods (1d, 7d, 30d, 1y, etc.)
+- 📰 **Trending News** — Latest cryptocurrency news from top sources
+- ⚖️ **Compare Coins** — Side-by-side comparison of two cryptocurrencies
+- 🔍 **Coin Detail Page** — Deep stats, links, description, and price history for any coin
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+| Technology | Purpose |
+|---|---|
+| React 18 | UI Framework |
+| Redux Toolkit (RTK Query) | State management & API fetching |
+| Ant Design | UI Component Library |
+| React Router v6 | Client-side routing |
+| Chart.js + react-chartjs-2 | Price charts |
+| Moment.js | Date formatting |
+| CoinRanking API | Crypto price & stats data |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📦 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js v16 or above
+- npm v8 or above
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# 1. Clone the repository
+git clone <your-repo-url>
 
-### `npm run eject`
+# 2. Go into the project folder
+cd cryptocurrency-dashboard
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 3. Install dependencies
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 4. Start the development server
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The app will open at **http://localhost:3000**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📁 Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+src/
+├── Component/
+│   ├── Home.js        → Dashboard home with stats & news preview
+│   ├── Crypto.js      → Full crypto list with search
+│   ├── Detail.js      → Single coin detail page with chart
+│   ├── News.js        → Cryptocurrency news feed
+│   ├── Compare.js     → Side-by-side coin comparison
+│   ├── Chart.js       → Reusable price chart component
+│   └── NavBar.jsx     → Sidebar navigation
+├── Services/
+│   ├── cryptoApi.js   → CoinRanking API (RTK Query)
+│   ├── cryptoNew.js   → News data service
+│   └── store.js       → Redux store configuration
+├── App.js             → Main app with routing
+├── App.css            → Global dark-theme styles
+└── index.js           → React entry point
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🖥️ Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Command | Description |
+|---|---|
+| `npm start` | Run the app in development mode |
+| `npm run build` | Build the app for production |
+| `npm test` | Run tests |
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🌐 Live Demo
 
-### Making a Progressive Web App
+> https://648092a8b7cfbf0904877858--heroic-tartufo-10ae66.netlify.app/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📝 Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- The **Bing News Search API** (via RapidAPI) was retired by Microsoft in August 2025. The news section now uses curated mock data to display cryptocurrency news articles.
+- API keys for CoinRanking are included for development purposes only. Move them to environment variables (`.env`) before deploying to production.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📄 License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and available for educational use.
